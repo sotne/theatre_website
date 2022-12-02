@@ -1,0 +1,113 @@
+.container {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr 0.9fr 1fr 1fr;
+    grid-template-rows: 0.6fr 2.5fr 0.4fr 0.2fr 0.2fr 1.3fr 1.3fr 1.3fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav-bar nav-bar nav-bar nav-bar nav-bar nav-bar"
+      "featured-shows featured-shows featured-shows featured-shows featured-shows featured-shows"
+      ". . . . . ."
+      ". april-2020 april-2020 april-2020 april-2020 ."
+      ". . . . . ."
+      ". article-1 article-1 article-1 article-1 ."
+      ". article-1 article-1 article-1 article-1 ."
+      ". map info shows social ."
+      ". map info shows social .";
+}
+  
+.article-1 { 
+    grid-area: article-1; 
+}
+
+.section1 body{
+    text-align: center;
+}
+  
+.april-2020 { 
+    grid-area: april-2020; 
+}
+
+.april-2020 p{
+    border: 1px solid black;
+    background-color: lightgrey;
+    padding-left: 30px;
+}
+  
+.featured-shows { 
+    grid-area: featured-shows; 
+    background-image: url(/images/theatre.jpg);
+    background-size: contain;
+    background-repeat: none;
+    
+}
+
+.featured-shows h1{
+    color: white;
+    margin-block: 90px;
+    text-align: center;
+    font-size: 50px;
+}
+  
+.nav-bar { 
+    grid-area: nav-bar; 
+    background-color: black;
+}
+
+.nav-bar h1{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1 ;
+    grid-row-end: 1 ;
+color: white;
+}
+
+.nav-bar a{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1 ;
+    grid-row-end: 1 ;
+    color:white;
+    text-decoration: none;
+}
+
+
+.info { 
+    grid-area: info; 
+    color: white;
+    background-color: black;
+    text-decoration: none;
+}
+.info a{
+    text-decoration: none;
+    color: white;
+} 
+  
+.shows { 
+    grid-area: shows; 
+    color: white;
+    background-color: black;
+}
+  
+.social { 
+    grid-area: social; 
+    color: white;
+    background-color: black;
+}
+  
+.map { 
+    grid-area: map; 
+    background-color: white;
+    background-color: black;
+}
+
+.footer {
+    grid-area: 8 / 1 / 10 / 7; 
+}
+
+button{
+    background-color: orange;
+    color:white;
+    margin: 1px solid black;
+}
